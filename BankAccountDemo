@@ -1,0 +1,12 @@
+public class BankAccountDemo {
+
+	public static void main(String[] args) {
+		
+		BankAccount ba = new BankAccount();
+		System.out.println(ba.DepositAmount(5000));
+		System.out.println(ba.WithdrawAmount(1000));
+		System.out.println(ba.AddInterest(0.01));
+
+	}
+
+}
