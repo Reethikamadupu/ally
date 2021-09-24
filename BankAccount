@@ -1,0 +1,42 @@
+public class BankAccount
+{
+	String customerid;
+	String accountid;
+	double balance;
+	
+	public BankAccount(String custid,String accid,double initialbalance)
+	{
+		customerid=custid;
+		accountid=accid;
+		balance=initialbalance;
+	}
+	
+	public BankAccount() {
+	}
+
+	public double DepositAmount(double amount)
+	{
+		double newBalance= balance + amount;
+		return newBalance;
+	}
+	
+	public double WithdrawAmount(double amount)
+	{
+		if(amount>balance)
+		{
+			return -1;
+		}
+		else
+		{
+			double newBalance=balance-amount;
+			return newBalance;
+		}
+	}
+	
+	public double AddInterest(double percent)
+	{
+		double newBalance=balance + balance*percent/100;
+		return newBalance;
+	}
+	
+}
